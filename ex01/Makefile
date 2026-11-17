@@ -19,7 +19,7 @@ all: dir $(NAME)
 
 $(NAME): Makefile $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $@
-	@echo "\033[1;33mCPP04 EX00 [✔]\033[0m"
+	@echo "\033[1;33mCPP04 EX01 [✔]\033[0m"
 
 
 $(OBJDIR)/%.o: %.cpp $(HEADERS) Makefile

@@ -13,13 +13,24 @@ class Form{
     public:
         Form();
         Form(std::string _name, const int _gradeTosign, const int _gradeToExecute);
-        Form(Form& other);
+        Form(const Form& other);
         Form& operator=(const Form& other);
         ~Form();
         std::string getname()const;
         bool getisSigned()const;
         int getgradeTosign()const;
         int getgradeToExecute()const;
+		class GradeTooHighException : public std::exception
+        {
+            public:
+                virtual const char* what() const throw();
+        };
+
+    	class GradeTooLowException : public std::exception
+        {
+            public:
+                virtual const char* what() const throw();
+        };
         
 };
 
