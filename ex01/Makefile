@@ -8,9 +8,9 @@ SRCDIR			= src
 OBJDIR			= obj
 DEPDIR			= deps
 
-SRCS = main.cpp Bureaucrat.cpp form.cpp
+SRCS = main.cpp Bureaucrat.cpp Form.cpp
 
-HEADERS = Bureaucrat.hpp form.hpp
+HEADERS = Bureaucrat.hpp Form.hpp
 
 OBJS			= $(SRCS:%.cpp=$(OBJDIR)/%.o)
 DEPS			= $(OBJS:%.o=$(DEPDIR)/%.d)
